@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.android.braintrainer.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/playingPage"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_column="1"
+                    android:layout_margin="7dp"
+                    android:layout_row="1"
+                    android:background="@drawable/circle"
+                    android:elevation="5dp"
+                    android:backgroundTint="@color/normalSecColor"
+                    android:id="@+id/timerBackground"
+
+                    >
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="10s"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp"
+                        android:id="@+id/timer"
+
+
+                         />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="10" />
+
+
+
+
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_column="1"
+                    android:layout_margin="7dp"
+                    android:layout_row="1"
+                    android:background="@drawable/circle"
+                    android:elevation="5dp"
+                    android:backgroundTint="@color/scoreColor"
+                    android:id="@+id/scoreBackground"
+                    >
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0 / 0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dp"
+                        android:id="@+id/score"
+
+
+                         />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="3 + 8"
+                    android:id="@+id/operation"
+                    android:textColor="#000000"
+                    android:textSize="35dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="="
+                    android:textColor="#000000"
+                    android:textSize="30dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="7dp"
+
+                    android:columnCount="2"
+                    android:rowCount="2">
+
+                    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_column="0"
+                        android:layout_margin="7dp"
+                        android:layout_row="0"
+                        android:background="@drawable/circle"
+                        android:elevation="5dp">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="10"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30dp"
+                            android:id="@+id/number0"
+                            android:tag="0"
+                            android:padding="7dp"
+                            android:onClick="checkAnswer" />
+
+                    </FrameLayout>
+
+                    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_column="1"
+                        android:layout_margin="7dp"
+                        android:layout_row="0"
+                        android:background="@drawable/circle"
+                        android:elevation="5dp">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="10"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30dp"
+                            android:id="@+id/number1"
+                            android:tag="1"
+                            android:padding="7dp"
+                            android:onClick="checkAnswer" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_column="0"
+                        android:layout_margin="7dp"
+                        android:layout_row="1"
+                        android:background="@drawable/circle"
+                        android:elevation="5dp">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="10"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30dp"
+                            android:id="@+id/number2"
+                            android:tag="2"
+                            android:padding="7dp"
+                            android:onClick="checkAnswer" />
+
+                    </FrameLayout>
+
+
+
+
+                    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_column="1"
+                        android:layout_margin="7dp"
+                        android:layout_row="1"
+                        android:background="@drawable/circle"
+                        android:elevation="5dp"
+
+                        >
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="10"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30dp"
+                            android:id="@+id/number3"
+                            android:tag="3"
+                            android:padding="7dp"
+                            android:onClick="checkAnswer" />
+
+                    </FrameLayout>
+
+                </GridLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Correct !"
+                    android:textSize="25dp"
+
+                    android:id="@+id/correctAnswer"
+                    android:textColor="@color/correctAnswerColor"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Faux !"
+                    android:textColor="@color/falseAnswerColor"
+                    android:id="@+id/falseAnswer"
+                    android:textSize="25dp"
+
+                    android:visibility="gone"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Ton score :"
+
+                    android:id="@+id/finalScore"
+                    android:textSize="25dp"
+
+                    android:visibility="gone"
+
+                    />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="Rejouer"
+            android:id="@+id/playAgain"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            android:onClick="playAgain"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/scoreColor"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/startPage"
+        >
+
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:clickable="true"
+            android:layout_margin="7dp"
+           android:onClick="start"
+            android:background="@drawable/circle"
+            android:elevation="7dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Go !"
+                android:textColor="#FFFFFF"
+                android:textSize="56dp"
+                android:id="@+id/start"
+
+                />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

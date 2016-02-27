@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="falseAnswerColor">#FF0000</color>
+    <color name="correctAnswerColor">#00C853</color>
+    <color name="sec10Color">#FF9800</color>
+    <color name="sec5Color">#E53935</color>
+    <color name="normalSecColor">#00C853</color>
+    <color name="scoreColor">#5C6BC0</color>
+</resources>
